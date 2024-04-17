@@ -34,12 +34,11 @@ jobs:
           command: mvn test
 
       - store_test_results:
-          path: target
-
+          path: target/surefire-reports/junitreports
 
       - store_artifacts:
-          path: target
-          destination: test-results
+          path: test-report
+          destination: test-report
 
 workflows:
   sample:
