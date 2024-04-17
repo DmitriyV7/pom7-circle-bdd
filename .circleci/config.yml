@@ -1,16 +1,12 @@
 version: 2.1
 
-executors:
-   my-executor:
-     docker-layer-caching: true
-     docker:
-        - image: openjdk:11
 jobs:
-  build:
-    executor: my-executor
+  build-and-test:
+    docker:
+      - image: cimg/openjdk:11.0
+
     steps:
       - checkout
-
       # Install latest versions of browsers and their corresponding drivers
       - run:
           name: Install Browsers and WebDriverManager
