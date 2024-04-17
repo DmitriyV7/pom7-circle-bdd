@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/openjdk:11.0
+      - image: circleci/openjdk:11-jdk
 
     steps:
       - checkout
@@ -34,12 +34,12 @@ jobs:
           command: mvn test
 
       - store_test_results:
-          path: target/HtmlReport/report
+          path: target
 
 
       - store_artifacts:
-          path: target/HtmlReport/html
-          destination: test-reports
+          path: target
+          destination: test-results
 
 workflows:
   sample:

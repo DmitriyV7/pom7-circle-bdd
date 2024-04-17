@@ -92,7 +92,7 @@
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>org.testng.reporters.JUnitXMLReporter</value>
+                            <value>org.testng.reporters.TestHTMLReporter</value>
                         </property>
                     </properties>
                     <includes>
