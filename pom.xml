@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.askomdch</groupId>
+    <groupId>org.example</groupId>
     <artifactId>pom7-circle-bdd</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -54,12 +54,14 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <reportFormat>html</reportFormat>
-                    <reportsDirectory>target/surefire-reports/reporttotal.html</reportsDirectory>
+                    <reportsDirectory>target/surefire-reports/</reportsDirectory>
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
+
 </project>
