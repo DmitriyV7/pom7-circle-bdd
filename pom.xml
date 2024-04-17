@@ -108,7 +108,6 @@
                             </jsonFiles>
                             <outputDirectory>target/cucumber-reports/</outputDirectory>
                             <projectName>pom7-circle-bdd</projectName>
-                            <buildNumber>1.0-SNAPSHOT</buildNumber>
                         </configuration>
                     </execution>
                 </executions>
