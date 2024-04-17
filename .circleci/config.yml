@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: ubuntu:20.04
+      - image: cimg/openjdk:11.0
 
     steps:
       - checkout
