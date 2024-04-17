@@ -12,29 +12,21 @@ jobs:
       - run:
           name: Install Browsers and WebDriverManager
           command: |
+            sudo apt-get update && sudo apt-get install -y wget firefox
             # Install Google Chrome
             wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
-            
-            # Install ChromeDriver (use the correct version for Chrome)
-            wget -q https://chromedriver.storage.googleapis.com/123.0.6312.124/chromedriver_linux64.zip
+            # Install ChromeDriver (ensure version compatibility with Chrome)
+            wget -q https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
             sudo mv chromedriver /usr/local/bin/
-            sudo chmod +x /usr/local/bin/chromedriver
-            
             # Install GeckoDriver for Firefox
             wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
             tar -xzf geckodriver-v0.30.0-linux64.tar.gz
             sudo mv geckodriver /usr/local/bin/
-            sudo chmod +x /usr/local/bin/geckodriver
       - run:
           name: Update package lists
           command: sudo apt-get update
-      - run:
-          name: Install missing dependencies
-          command: |
-            sudo apt-get install -y fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcairo2 libcups2 libdrm2 libgbm1 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libu2f-udev libvulkan1 libx11-6 libxcb1 libxcomposite1 libxdamage1 libxext6 libxfixes3 libxkbcommon0 libxrandr2 xdg-utils
-
       - run:
           name: Clean and Build
           command: mvn clean install -DskipTests
