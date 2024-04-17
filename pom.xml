@@ -107,7 +107,7 @@
                                 <jsonFile>target/cucumber-reports/cucumber.json</jsonFile> <!-- Path to the JSON file -->
                             </jsonFiles>
                             <outputDirectory>target/cucumber-reports/</outputDirectory> <!-- Output directory for reports -->
-                            <projectName>MyProject</projectName> <!-- Optional: Name of your project -->
+                            <projectName>pom7-circle-bdd</projectName> <!-- Optional: Name of your project -->
                         </configuration>
                     </execution>
                 </executions>
