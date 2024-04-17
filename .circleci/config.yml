@@ -37,8 +37,8 @@ jobs:
           path: target/surefire-reports
 
       - store_artifacts:
-          path: target/surefire-reports
-          destination: target/surefire-reports
+          path: target/surefire-reports/html
+          destination: test-reports
 
 workflows:
   sample:
