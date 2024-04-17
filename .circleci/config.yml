@@ -12,19 +12,21 @@ jobs:
       - run:
           name: Install Browsers and WebDriverManager
           command: |
-            sudo apt-get update && sudo apt-get install -y wget firefox
             # Install Google Chrome
             wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
-            # Install ChromeDriver (ensure version compatibility with Chrome)
+            
+            # Install ChromeDriver (use the correct version for Chrome)
             wget -q https://chromedriver.storage.googleapis.com/123.0.6312.124/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
             sudo mv chromedriver /usr/local/bin/
+            sudo chmod +x /usr/local/bin/chromedriver
+            
             # Install GeckoDriver for Firefox
             wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
             tar -xzf geckodriver-v0.30.0-linux64.tar.gz
             sudo mv geckodriver /usr/local/bin/
-
+            sudo chmod +x /usr/local/bin/geckodriver
       - run:
           name: Clean and Build
           command: mvn clean install -DskipTests
