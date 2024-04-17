@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.askomdch</groupId>
-    <artifactId>git-collab-askomdch</artifactId>
+    <artifactId>pom7-circle-bdd</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -94,26 +94,25 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.8.1</version> <!-- Adjust to the latest version -->
+                <version>5.8.1</version> <!-- Update to the latest version -->
                 <executions>
                     <execution>
                         <id>generate-cucumber-reports</id>
-                        <phase>verify</phase>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <jsonFiles>
-                                <jsonFile>target/cucumber-reports/cucumber.json</jsonFile>
+                                <jsonFile>target/cucumber-reports/cucumber.json</jsonFile> <!-- Path to the JSON file -->
                             </jsonFiles>
-                            <outputDirectory>target/cucumber-reports/</outputDirectory>
-                            <projectName>pom7-circle-bdd</projectName>
+                            <outputDirectory>target/cucumber-reports/</outputDirectory> <!-- Output directory for reports -->
+                            <projectName>MyProject</projectName> <!-- Optional: Name of your project -->
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>
 
