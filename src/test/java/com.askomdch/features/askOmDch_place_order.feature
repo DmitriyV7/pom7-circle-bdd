@@ -1,5 +1,5 @@
 Feature: AskOmDch Place Order  Feature
-  @smoke
+#  @smoke
   Scenario Outline: AskOmDch Place Order As a Guest
     Given user is on the homepage
     Then user should be able to click store link
@@ -42,7 +42,7 @@ Feature: AskOmDch Place Order  Feature
       |	RonBri1@gmail.com 	|	Ronaldo	    |	Briones	    |	RonBrionesINC	|	United States (US)       	|	777 N Palatine rd	|	apt#777          	|	Chicago	|	WA     	|	55555	    |	12345687	|	Bracelet    	|	Boho Bangle Bracelet	|
       |	IzaLan1@gmail.com 	|	Izaiah	    |	Lange	    |	IzaLangeINC	    |	United States (US)       	|	358 N Palatine rd	|	apt#123          	|	Chicago	|	WI     	|	50008	    |	12345688	|	jeans       	|	Basic Blue Jeans    	|
 
-  @smoke
+#  @smoke
   Scenario Outline: AskOmDch Place Order As a Guest and Create Account
     Given user is on the homepage
     Then user should be able to click store link
@@ -94,7 +94,7 @@ Feature: AskOmDch Place Order  Feature
 
 
 
-  @smoke
+#  @smoke
   Scenario Outline: AskOmDch Place Order As a Guest with different address for delivery
     Given user is on the homepage
     Then user should be able to click store link
@@ -148,7 +148,7 @@ Feature: AskOmDch Place Order  Feature
       |	DavLee@gmail.com	    |	David	    |	Lee	        |	Lee INC	        |	 United States (US) 	|	Revolution Lane	|	Apt 133	        |	Agosvale	|	WA     	|	50066	|	1582564983	|	Roger	        |	Scherer	        |	Scherer INC	        |	 United States (US) 	|	Mount Boulevard	        |	Apt 355	                |	Ouissey	    |	WA      	|	42366	        |	Thank you!	|	 jeans        	|	 Basic Blue Jeans     	|
 
 
-  @smoke
+#  @smoke
   Scenario Outline: AskOmDch Place Order As a Guest with different address for delivery with create an account
     Given user is on the homepage
     Then user should be able to click store link
