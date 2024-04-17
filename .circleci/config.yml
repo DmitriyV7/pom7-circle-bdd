@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/openjdk:11.0
+      - image: ubuntu:20.04
 
     steps:
       - checkout
@@ -27,6 +27,9 @@ jobs:
             tar -xzf geckodriver-v0.30.0-linux64.tar.gz
             sudo mv geckodriver /usr/local/bin/
             sudo chmod +x /usr/local/bin/geckodriver
+      - run:
+          name: Update package lists
+          command: sudo apt-get update
       - run:
           name: Clean and Build
           command: mvn clean install -DskipTests
