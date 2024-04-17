@@ -54,7 +54,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <reportFormat>html</reportFormat>
-                    <reportsDirectory>${project.build.directory}/surefire-reports/html</reportsDirectory>
+                    <reportsDirectory>target/surefire-reports/html</reportsDirectory>
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
