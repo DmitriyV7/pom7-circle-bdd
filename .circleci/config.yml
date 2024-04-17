@@ -17,12 +17,12 @@ jobs:
             wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
             # Install ChromeDriver (ensure version compatibility with Chrome)
-            wget -q https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip
+            wget -q https://chromedriver.storage.googleapis.com/2.46/chromedriver_win32.zip
+            unzip chromedriver_win32.zip
             sudo mv chromedriver /usr/local/bin/
             # Install GeckoDriver for Firefox
-            wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
-            tar -xzf geckodriver-v0.30.0-linux64.tar.gz
+            wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win32.tar.gz
+            tar -xzf geckodriver-v0.30.0-win32.tar.gz
             sudo mv geckodriver /usr/local/bin/
       - run:
           name: Update package lists
