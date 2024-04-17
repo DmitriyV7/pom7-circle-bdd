@@ -89,8 +89,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <reportFormat>html</reportFormat>
-                    <reportsDirectory>${project.build.directory}/surefire-reports/html</reportsDirectory>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.testng.reporters.JUnitXMLReporter</value>
+                        </property>
+                    </properties>
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
