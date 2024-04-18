@@ -23,6 +23,8 @@ jobs:
             wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
             tar -xzf geckodriver-v0.30.0-linux64.tar.gz
             sudo mv geckodriver /usr/local/bin/
+            mkdir -p ~/test-results/junit/
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
 
       - run:
           name: Clean and Build
@@ -31,9 +33,9 @@ jobs:
       - run:
           name: Test
           command: mvn test
-
+        when: always
       - store_test_results:
-          path: target/surefire-reports/junitreports
+          path: ~/test-results
 
       - store_artifacts:
           path: test-report
