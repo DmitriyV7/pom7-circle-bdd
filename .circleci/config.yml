@@ -48,3 +48,13 @@ jobs:
             # Store test results for later use
             - store_test_results:
                 path: target/surefire-reports
+
+            # Save test artifacts (e.g., reports) for later use
+            - store_artifacts:
+                path: target/surefire-reports
+                destination: test-results
+    workflows:
+        version: 2
+        build_and_test:
+          jobs:
+            - build
