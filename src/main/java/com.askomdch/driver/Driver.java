@@ -23,9 +23,9 @@ public class Driver {
         if (driver == null){
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().clearDriverCache().setup();
-                    WebDriverManager.chromedriver().clearResolutionCache().setup();
-                    WebDriverManager.chromedriver().browserVersion("123").setup();
+//                    WebDriverManager.chromedriver().clearDriverCache().setup();
+//                    WebDriverManager.chromedriver().clearResolutionCache().setup();
+                    WebDriverManager.chromedriver().browserVersion("123.0.6312.122").setup();
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--headless");
