@@ -31,7 +31,7 @@ jobs:
           command: mvn clean install -DskipTests
 
       - run:
-          name: Test
+          name: Save test results
           command: mvn test
         when: always
       - store_test_results:
