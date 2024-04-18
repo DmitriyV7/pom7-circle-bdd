@@ -50,6 +50,18 @@
             <version>${java.faker.version}</version>
         </dependency>
         <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.11.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.11.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>${apache.poi.version}</version>
@@ -93,13 +105,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <reportFormat>html</reportFormat>
-                    <reportsDirectory>target/surefire-reports/</reportsDirectory>
-                    <includes>
-                        <include>**/*Runner.java</include>
-                    </includes>
+                    <test>
+                        **/*runner.java
+                    </test>
                 </configuration>
-
             </plugin>
         </plugins>
     </build>

@@ -25,22 +25,26 @@ jobs:
             sudo mv geckodriver /usr/local/bin/
             
 
-      - run:
-          name: Clean and Build
-          command: mvn clean install -DskipTests
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "pom.xml" }}
 
-      - run:
-          name: Test
-          command: mvn test
+            # Install project dependencies with Maven
+            - run:
+                name: Install dependencies
+                command: mvn dependency:go-offline
 
-      - store_test_results:
-          path: target/surefire-reports/
+            # Save the new cache
+            - save_cache:
+                key: v1-dependencies-{{ checksum "pom.xml" }}
+                paths:
+                  - ~/.m2/repository
 
-      - store_artifacts:
-          path: test-report
-          destination: test-report
+            # Run the Cucumber tests using Maven
+            - run:
+                name: Run Cucumber tests
+                command: mvn test
 
-workflows:
-  sample:
-    jobs:
-      - build-and-test
+            # Store test results for later use
+            - store_test_results:
+                path: target/surefire-reports
