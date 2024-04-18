@@ -1,5 +1,5 @@
 Feature: AskOmDch User Registration Feature with Scenario Outline
-#  @smoke
+  @smoke
   Scenario Outline: AskOmDch Register New User with Scenario Outline
     Given user is on the homepage
     When user clicks on the account link
@@ -13,20 +13,20 @@ Feature: AskOmDch User Registration Feature with Scenario Outline
 
     Examples:
       |   username      |      email                |   password    |
-      |	ChrOlivares4	|	ChrOlivares4@gmail.com	|	ChrOli21	|
-      |	AleEstrella4	|	AleEstrella4@gmail.com	|	AleEst21	|
-      |	NesDuong4	    |	NesDuong4@gmail.com	    |	NesDuo21	|
-      |	DayDelong4	    |	DayDelong4@gmail.com    |	DayDel21	|
-      |	JosDonohue4	    |	JosDonohue4@gmail.com	|	JosDon21	|
-      |	JamKeeton4	    |	JamKeeton4@gmail.com    |	JamKee21	|
-      |	EliWebber4	    |	EliWebber4@gmail.com    |	EliWeb21	|
-      |	DorOlivarez4	|	DorOlivarez4@gmail.com	|	DorOli21	|
-      |	KyrEstep4	    |	KyrEstep4@gmail.com	    |	KyrEst21	|
-      |	StaTrimble4	    |	StaTrimble4@gmail.com	|	StaTri21	|
-      |	DasShea4	    |	DasShea4@gmail.com	    |	DasShe21	|
+      |	ChrOlivares5	|	ChrOlivares5@gmail.com	|	ChrOli21	|
+      |	AleEstrella5	|	AleEstrella5@gmail.com	|	AleEst21	|
+      |	NesDuong5	    |	NesDuong5@gmail.com	    |	NesDuo21	|
+      |	DayDelong5	    |	DayDelong5@gmail.com    |	DayDel21	|
+      |	JosDonohue5	    |	JosDonohue5@gmail.com	|	JosDon21	|
+      |	JamKeeton5	    |	JamKeeton5@gmail.com    |	JamKee21	|
+      |	EliWebber5	    |	EliWebber5@gmail.com    |	EliWeb21	|
+      |	DorOlivarez5	|	DorOlivarez5@gmail.com	|	DorOli21	|
+      |	KyrEstep5	    |	KyrEstep5@gmail.com	    |	KyrEst21	|
+      |	StaTrimble5	    |	StaTrimble5@gmail.com	|	StaTri21	|
+      |	DasShea5	    |	DasShea5@gmail.com	    |	DasShe21	|
 
 
-# @smoke
+ @smoke
   Scenario Outline: AskOmDch Register New User with Scenario Outline and Add Billing and Shipping Address
     Given user is on the homepage
     When user clicks on the account link
@@ -68,16 +68,16 @@ Feature: AskOmDch User Registration Feature with Scenario Outline
 
    Examples:
      |	 username 	|	 email                |	 password 	|	 firstname 	|	 lastname 	|	 company_name 	|	 country            	|	 street_address1	|	 street_address2 	|	 city    	|	 state 	|	 zip_code 	|	 phone    	|	 shipping_firstname 	|	 shipping_lastname 	|	 shipping_company_name 	|	 shipping_country     	|	 shipping_street_address1 	|	 shipping_street_address2 	|	 shipping_city 	|	 shipping_state 	|	 shipping_zip_code 	|
-     |	LonSandlin4	|	LonSandlin4@gmail.com |	LonSan21	|	Long	    |	Sandlin	    |	LonSandlin COR	|	 United States (US) 	|	Manor Avenue	    |	 apt#321         	|	 Chicago 	|	 IL    	|	60008	    |	12345678	|	Willie	                |	Morin	            |	WMorin COR	            |	 United States (US) 	|	Queen Street	            |	 apt#43               	    |	 Apex      	    |	CA	                |	27516	            |
-     |	SeaHutto4	|	SeaHutto4@gmail.com	  |	SeaHut21	|	Seamus	    |	Hutto	    |	SeaHutto COR	|	 United States (US) 	|	Mill Lane	        |	 apt#123         	|	Vlurphis	|	 NC    	|	50008	    |	99999999	|	Keara	                |	Kasper	            |	KKasper COR	            |	 United States (US) 	|	Theater Way	                |	 apt#43               	    |	Ivlepool	    |	GA	                |	27517	            |
-     |	RhoFoote4	|	RhoFoote4@gmail.com	  |	RhoFoo21	|	Rhonda	    |	Foote	    |	RhoFoote COR	|	 United States (US) 	|	Gilded Street	    |	 apt#777         	|	Eprehbus	|	 IN    	|	55555	    |	44444444	|	Ann	                    |	Beasley	            |	ABeasley COR	        |	 United States (US) 	|	Sun Street	                |	 apt#43               	    |	Oslikmery	    |	IA	                |	27515	            |
-     |	JaiWing4	|	JaiWing4@gmail.com	  |	JaiWin21	|	Jairo	    |	Wing	    |	JaiWing COR	    |	 United States (US) 	|	Vine Avenue	        |	 apt#321         	|	Zrauktin	|	 IL    	|	60008	    |	12345678	|	Oliver	                |	Hargis	            |	OHargis COR	            |	 United States (US) 	|	Jewel Avenue	            |	 apt#43               	    |	Zecton	        |	OH	                |	27512	            |
-     |	StuFleming4	|	StuFleming4@gmail.com |	StuFle21	|	Stuart	    |	Fleming	    |	StuFleming COR	|	 United States (US) 	|	Honor Lane	        |	 apt#123         	|	Xushire   	|	 NC    	|	50008	    |	99999999	|	Sky	                    |	Winslow	            |	SWinslow COR	        |	 United States (US) 	|	Corporation Street	        |	 apt#43               	    |	Desea	        |	TN	                |	27519	            |
-     |	EmiEmerson4	|	EmiEmerson4@gmail.com |	EmiEme21	|	Emiliano  	|	Emerson	    |	EmiEmerson COR	|	 United States (US) 	|	Lilypad Street	    |	 apt#777         	|	Fendale	    |	 IN    	|	55555	    |	44444444	|	Mikel	                |	Curley	            |	MCurley COR	            |	 United States (US) 	|	Wetland Lane	            |	 apt#43               	    |	Clason	        |	IL	                |	27987	            |
-     |	StoHardesty4|	StoHardesty4@gmail.com|	StoHar21	|	Stone	    |	Hardesty	|	StoHardesty COR	|	 United States (US) 	|	Baker Route	        |	 apt#321         	|	Fesa	    |	 IL    	|	60008	    |	12345678	|	Kerrigan	            |	Schrock	            |	KSchrock COR	        |	 United States (US) 	|	Ebon Street	                |	 apt#43               	    |	Roit	        |	LA	                |	27054	            |
-     |	MegAmato4	|	MegAmato4@gmail.com	  |	MegAma21	|	Megan	    |	Amato	    |	MegAmato COR	|	 United States (US) 	|	Petal Boulevard	    |	 apt#123         	|	Ozlose	    |	 NC    	|	50008	    |	99999999	|	Ben	                    |	Moon	            |	BMoon COR	            |	 United States (US) 	|	Globe Lane	                |	 apt#43               	    |	Tine	        |	VA	                |	20987	            |
-     |	SteSampson4	|	SteSampson4@gmail.com |	SteSam21	|	Stephen	    |	Sampson	    |	SteSampson COR	|	 United States (US) 	|	Fountain Passage	|	 apt#321         	|	Esrora	    |	 IL    	|	60008	    |	12345678	|	Keeley	                |	Pullen	            |	KPullen COR	            |	 United States (US) 	|	Bellow Route	            |	 apt#49               	    |	Astrand	        |	WI	                |	27598	            |
-     |	EnrHolbrook4|	EnrHolbrook4@gmail.com|	EnrHol21	|	Enrique	    |	Holbrook	|	EnrHolbrook COR	|	 United States (US) 	|	Lowland Way	        |	 apt#777         	|	Ilatin	    |	 IN    	|	55555	    |	44444444	|	Isabela	                |	Gerber	            |	IGerber COR	            |	 United States (US) 	|	Aviation Route	            |	 apt#40               	    |	Adenavine	    |	PA	                |	27505	            |
-     |	EllNeill4	|	EllNeill4@gmail.com	  |	EllNei21	|	Ellie	    |	Neill	    |	EllNeill COR	|	 United States (US) 	|	Fortune Lane	    |	 apt#123         	|	Oracester	|	 NC    	|	50008	    |	99999999	|	Zander	                |	Isaacs	            |	ZIsaacs COR	            |	 United States (US) 	|	Green Row	                |	 apt#44               	    |	Oniopolis	    |	 NC  	            |	27032	            |
+     |	LonSandlin5	|	LonSandlin5@gmail.com |	LonSan21	|	Long	    |	Sandlin	    |	LonSandlin COR	|	 United States (US) 	|	Manor Avenue	    |	 apt#321         	|	 Chicago 	|	 IL    	|	60008	    |	12345678	|	Willie	                |	Morin	            |	WMorin COR	            |	 United States (US) 	|	Queen Street	            |	 apt#43               	    |	 Apex      	    |	CA	                |	27516	            |
+     |	SeaHutto5	|	SeaHutto5@gmail.com	  |	SeaHut21	|	Seamus	    |	Hutto	    |	SeaHutto COR	|	 United States (US) 	|	Mill Lane	        |	 apt#123         	|	Vlurphis	|	 NC    	|	50008	    |	99999999	|	Keara	                |	Kasper	            |	KKasper COR	            |	 United States (US) 	|	Theater Way	                |	 apt#43               	    |	Ivlepool	    |	GA	                |	27517	            |
+     |	RhoFoote5	|	RhoFoote5@gmail.com	  |	RhoFoo21	|	Rhonda	    |	Foote	    |	RhoFoote COR	|	 United States (US) 	|	Gilded Street	    |	 apt#777         	|	Eprehbus	|	 IN    	|	55555	    |	44444444	|	Ann	                    |	Beasley	            |	ABeasley COR	        |	 United States (US) 	|	Sun Street	                |	 apt#43               	    |	Oslikmery	    |	IA	                |	27515	            |
+     |	JaiWing5	|	JaiWing5@gmail.com	  |	JaiWin21	|	Jairo	    |	Wing	    |	JaiWing COR	    |	 United States (US) 	|	Vine Avenue	        |	 apt#321         	|	Zrauktin	|	 IL    	|	60008	    |	12345678	|	Oliver	                |	Hargis	            |	OHargis COR	            |	 United States (US) 	|	Jewel Avenue	            |	 apt#43               	    |	Zecton	        |	OH	                |	27512	            |
+     |	StuFleming5	|	StuFleming5@gmail.com |	StuFle21	|	Stuart	    |	Fleming	    |	StuFleming COR	|	 United States (US) 	|	Honor Lane	        |	 apt#123         	|	Xushire   	|	 NC    	|	50008	    |	99999999	|	Sky	                    |	Winslow	            |	SWinslow COR	        |	 United States (US) 	|	Corporation Street	        |	 apt#43               	    |	Desea	        |	TN	                |	27519	            |
+     |	EmiEmerson5	|	EmiEmerson5@gmail.com |	EmiEme21	|	Emiliano  	|	Emerson	    |	EmiEmerson COR	|	 United States (US) 	|	Lilypad Street	    |	 apt#777         	|	Fendale	    |	 IN    	|	55555	    |	44444444	|	Mikel	                |	Curley	            |	MCurley COR	            |	 United States (US) 	|	Wetland Lane	            |	 apt#43               	    |	Clason	        |	IL	                |	27987	            |
+     |	StoHardesty5|	StoHardesty5@gmail.com|	StoHar21	|	Stone	    |	Hardesty	|	StoHardesty COR	|	 United States (US) 	|	Baker Route	        |	 apt#321         	|	Fesa	    |	 IL    	|	60008	    |	12345678	|	Kerrigan	            |	Schrock	            |	KSchrock COR	        |	 United States (US) 	|	Ebon Street	                |	 apt#43               	    |	Roit	        |	LA	                |	27054	            |
+     |	MegAmato5	|	MegAmato5@gmail.com	  |	MegAma21	|	Megan	    |	Amato	    |	MegAmato COR	|	 United States (US) 	|	Petal Boulevard	    |	 apt#123         	|	Ozlose	    |	 NC    	|	50008	    |	99999999	|	Ben	                    |	Moon	            |	BMoon COR	            |	 United States (US) 	|	Globe Lane	                |	 apt#43               	    |	Tine	        |	VA	                |	20987	            |
+     |	SteSampson5	|	SteSampson5@gmail.com |	SteSam21	|	Stephen	    |	Sampson	    |	SteSampson COR	|	 United States (US) 	|	Fountain Passage	|	 apt#321         	|	Esrora	    |	 IL    	|	60008	    |	12345678	|	Keeley	                |	Pullen	            |	KPullen COR	            |	 United States (US) 	|	Bellow Route	            |	 apt#49               	    |	Astrand	        |	WI	                |	27598	            |
+     |	EnrHolbrook5|	EnrHolbrook5@gmail.com|	EnrHol21	|	Enrique	    |	Holbrook	|	EnrHolbrook COR	|	 United States (US) 	|	Lowland Way	        |	 apt#777         	|	Ilatin	    |	 IN    	|	55555	    |	44444444	|	Isabela	                |	Gerber	            |	IGerber COR	            |	 United States (US) 	|	Aviation Route	            |	 apt#40               	    |	Adenavine	    |	PA	                |	27505	            |
+     |	EllNeill5	|	EllNeill5@gmail.com	  |	EllNei21	|	Ellie	    |	Neill	    |	EllNeill COR	|	 United States (US) 	|	Fortune Lane	    |	 apt#123         	|	Oracester	|	 NC    	|	50008	    |	99999999	|	Zander	                |	Isaacs	            |	ZIsaacs COR	            |	 United States (US) 	|	Green Row	                |	 apt#44               	    |	Oniopolis	    |	 NC  	            |	27032	            |
 
 
