@@ -25,9 +25,9 @@ jobs:
             sudo mv geckodriver /usr/local/bin/
 
       # Cache Maven dependencies to speed up builds
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
+#      - restore_cache:
+#          keys:
+#            - v1-dependencies-{{ checksum "pom.xml" }}
 
       # Install project dependencies with Maven
       - run:
