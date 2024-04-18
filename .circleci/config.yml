@@ -30,11 +30,11 @@ jobs:
           command: mvn clean install -DskipTests
 
       - run:
-          name: Save test results
+          name: Test
           command: mvn test
-        when: always
+
       - store_test_results:
-          path: test-results
+          path: target/surefire-reports/
 
       - store_artifacts:
           path: test-report
