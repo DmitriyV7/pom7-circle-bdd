@@ -26,10 +26,10 @@ public class Driver {
                     WebDriverManager.chromedriver().clearDriverCache().setup();
                     WebDriverManager.chromedriver().clearResolutionCache().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.addArguments("--headless");
+//                    chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--window-size=1920,1080");
-                    chromeOptions.addArguments("--no-sandbox");
-                    chromeOptions.addArguments("--disable-dev-shm-usage");
+//                    chromeOptions.addArguments("--no-sandbox");
+//                    chromeOptions.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "firefox":
