@@ -23,7 +23,8 @@ public class Driver {
         if (driver == null){
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
+                    WebDriverManager.chromedriver().clearResolutionCache().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--window-size=1920,1080");
