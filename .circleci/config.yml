@@ -1,45 +1,46 @@
 version: 2.1
 
 jobs:
-  build:
+  build-and-test:
     docker:
-      - image: cimg/openjdk:11.0  # Use the appropriate image for your Java project
+      - image: cimg/openjdk:11.0
 
     steps:
-      - checkout  # Checkout the code
-
-      # Cache Maven dependencies to speed up builds
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
-
-      # Install project dependencies with Maven
+      - checkout
+      # Install latest versions of browsers and their corresponding drivers
       - run:
-          name: Install dependencies
-          command: mvn dependency:go-offline
+          name: Install Browsers and WebDriverManager
+          command: |
+            sudo apt-get update && sudo apt-get install -y wget firefox
+            # Install Google Chrome
+            wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+            # Install ChromeDriver (ensure version compatibility with Chrome)
+            wget -q https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            sudo mv chromedriver /usr/local/bin/
+            # Install GeckoDriver for Firefox
+            wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+            tar -xzf geckodriver-v0.30.0-linux64.tar.gz
+            sudo mv geckodriver /usr/local/bin/
 
-      # Save the new cache
-      - save_cache:
-          key: v1-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
 
-      # Run the Cucumber tests using Maven
       - run:
-          name: Run Cucumber tests
+          name: Clean and Build
+          command: mvn clean install -DskipTests
+
+      - run:
+          name: Test
           command: mvn test
 
-      # Store test results for later use
       - store_test_results:
-          path: target/surefire-reports
+          path: target/surefire-reports/
 
-      # Save test artifacts (e.g., reports) for later use
       - store_artifacts:
-          path: target/surefire-reports
-          destination: test-results
+          path: test-report
+          destination: test-report
 
 workflows:
-  version: 2
-  build_and_test:
+  sample:
     jobs:
-      - build
+      - build-and-test
