@@ -46,8 +46,10 @@ jobs:
           command: mvn test
 
       # Store test results for later use
-      - store_test_results:
-          path: target/surefire-reports/store_test_results
+      - run:
+          name: Create test results directory
+          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
+
 
       # Save test artifacts (e.g., reports) for later use
       - store_artifacts:

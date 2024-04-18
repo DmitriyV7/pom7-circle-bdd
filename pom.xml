@@ -22,6 +22,11 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v123</artifactId> <!-- Replace v124 with the appropriate version -->
+            <version>4.19.1</version> <!-- Replace with the version matching your Selenium version -->
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.12.1</version>
         </dependency>
@@ -55,9 +60,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <test>
-                        **/*Runner.java
-                    </test>
+                    <includes>
+                        <include>**/*Runner.java</include>
+                    </includes>
+                    <reportFormat>xml</reportFormat>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
