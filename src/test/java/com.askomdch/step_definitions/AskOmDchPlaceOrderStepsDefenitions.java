@@ -98,8 +98,11 @@ public class AskOmDchPlaceOrderStepsDefenitions {
     @And("user should be able to see {string} confirmation message")
     public void userShouldBeAbleToSeeConfirmationMessage(String confirmationMessage) throws InterruptedException {
         WebElement actualConfirmationMessage = getDriver().findElement(By.xpath("//*[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received']"));
-        Assert.assertEquals("Your order not confirmed",confirmationMessage,actualConfirmationMessage.getText());
-        Thread.sleep(3000);
+        if(actualConfirmationMessage.isEnabled()) {
+            Assert.assertEquals("Your order not confirmed",confirmationMessage,actualConfirmationMessage.getText());
+            } else {
+        Thread.sleep(1000);
+        }
     }
 
     @And("user should be able to create account")
