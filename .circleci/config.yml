@@ -51,7 +51,7 @@ jobs:
           command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: test-results
+          path: /home/circleci/project/target/surefire-reports
 
       # Save test artifacts (e.g., reports) for later use
       - store_artifacts:
