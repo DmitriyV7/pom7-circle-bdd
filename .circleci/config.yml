@@ -51,7 +51,7 @@ jobs:
           command: mkdir -p /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: /home/circleci/pom7-circle-bdd/target/surefire-reports
+          path: /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
 
       # Save test artifacts (e.g., reports) for later use
       - store_artifacts:
