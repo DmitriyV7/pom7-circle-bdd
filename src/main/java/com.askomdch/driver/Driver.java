@@ -27,7 +27,7 @@ public class Driver {
 //                    WebDriverManager.chromedriver().clearResolutionCache().setup();
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-//                    chromeOptions.addArguments("--headless");
+                    chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--window-size=1920,1080");
 //                    chromeOptions.addArguments("--no-sandbox");
 //                    chromeOptions.addArguments("--disable-dev-shm-usage");
