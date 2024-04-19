@@ -4,16 +4,8 @@ jobs:
   build:
     docker:
       - image: cimg/openjdk:11.0  # Use the appropriate image for your Java project
-    working_directory: /tmp
     steps:
-      - run:
-          name: Creating Dummy Artifacts
-          command: |
-              echo "my artifact file" > /tmp/artifact-1;
-              mkdir /tmp/artifacts;
-              echo "my artifact files in a dir" > /tmp/artifacts/artifact-2;
-    
-             - checkout  # Checkout the code
+      - checkout  # Checkout the code
         # Install latest versions of browsers and their corresponding drivers
       - run:
           name: Install Browsers and WebDriverManager
@@ -60,14 +52,10 @@ jobs:
       - store_test_results:
           path: target/surefire-reports
 #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
-
-      # Save test artifacts (e.g., reports) for later use
       - store_artifacts:
-          path: /tmp/artifact-1
-          destination: artifact-file
+          path: test-report
+          destination: test-report
 
-      - store_artifacts:
-          path: /tmp/artifacts
 
 workflows:
   version: 2
