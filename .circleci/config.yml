@@ -47,10 +47,10 @@ jobs:
       # Store test results for later use
       - run:
           name: Create test results directory
-          command: mkdir -p /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
+          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: target/surefire-reports
+          path: /home/circleci/project/target/surefire-reports
 #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
       - store_artifacts:
           path: target/surefire-reports
