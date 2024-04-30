@@ -22,8 +22,8 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v123</artifactId> <!-- Replace v124 with the appropriate version -->
-            <version>4.19.1</version> <!-- Replace with the version matching your Selenium version -->
+            <artifactId>selenium-devtools-v124</artifactId> <!-- Replace v125 with the appropriate version -->
+            <version>4.20.0</version> <!-- Replace with the version matching your Selenium version -->
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
